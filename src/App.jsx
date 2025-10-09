@@ -1,32 +1,77 @@
 function App() {
+  function closeNave() {
+    const navMenu = document.getElementById("nav-menu-checkbox");
+    navMenu.checked = false;
+  }
+
   return (
     <>
       <header>
         <div className="navbar">
-          <div className="nav-logo">AL.CO</div>
-          <input type="checkbox" id="nav-menu-checkbox" className="nav-menu-checkbox"/>
-          <div className="nav-menu">
-            <a href="" className="menu-item">
-              Home
-            </a>
-            <a href="" className="menu-item">
-              About
-            </a>
-            <a href="" className="menu-item">
-              Popular Products
-            </a>
-            <a href="" className="menu-item">
-              Ratings
-            </a>
+          <div className="nav-col-1">
+            <div className="nav-logo">AL.CO</div>
+
+            <button className="contact-btn btn">CONTACT US</button>
+            <div className="nav-cart"></div>
+            <label htmlFor="nav-menu-checkbox" className="nav-menu-toggle btn">
+              <span className="nav-menu-icon"></span>
+            </label>
           </div>
-          <button className="contact-btn btn">CONTACT US</button>
-          <div className="nav-cart"></div>
-          <label htmlFor="nav-menu-checkbox" className="nav-menu-toggle btn">
-            <span className="nav-menu-icon"></span>
-          </label>
+
+          <div className="nav-col-2">
+            <input
+              type="checkbox"
+              id="nav-menu-checkbox"
+              className="nav-menu-checkbox"
+            />
+            <div className="nav-menu">
+              <a href="#home" className="menu-item" onClick={() => closeNave()}>
+                Home
+              </a>
+              <a
+                href="#about"
+                className="menu-item"
+                onClick={() => closeNave()}
+              >
+                About
+              </a>
+              <a
+                href="#popular"
+                className="menu-item"
+                onClick={() => closeNave()}
+              >
+                Popular Products
+              </a>
+              <a
+                href="#ratings"
+                className="menu-item"
+                onClick={() => closeNave()}
+              >
+                Ratings
+              </a>
+            </div>
+          </div>
         </div>
       </header>
       <main>
+        <section id="home" className="home">
+          <div className="col-1">
+            <h1>Main product</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur, quibusdam provident repellat, eveniet aperiam
+              veritatis deleniti tempore iure totam voluptatem maxime nihil
+              explicabo illo quod molestiae. Ut, nam ratione?
+            </p>
+          </div>
+          <div className="col-2">
+            {/* product image here */}
+            {/* video container here */}
+          </div>
+        </section>
+        <section id="about"></section>
+        <section id="popular"></section>
+        <section id="ratings"></section>
         <p>
           <span>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, esse

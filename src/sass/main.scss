@@ -1,4 +1,9 @@
 main{
     margin-top: 70px;
     padding: 10px;
+
+    .home{
+        scroll-behavior: smooth;
+        scroll-margin-block-start: 70px;
+    }
 }

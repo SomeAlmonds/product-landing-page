@@ -19,11 +19,32 @@ body{
 
 .btn{
     background-color: $main-theme-color;
-    border: none;
+    border: 1px solid $main-theme-color ;
     border-radius: 5px;
+    color: $second-theme-color;
     height: 40px;
     margin: 2px;
     min-width: 40px;
+    overflow: hidden;
     padding: 4px;
+    transition: 200ms;
     width: fit-content;
+
+    &:hover{
+        background-color: $second-theme-color;
+        color: $main-theme-color;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: $main-text-color;
+    transition: 100ms;
+
+    &:hover{
+        font-size: 1.6rem;
+    }
+    &:active{
+        font-size: 1.5rem;
+    }
 }
