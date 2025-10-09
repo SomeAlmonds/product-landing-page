@@ -1,3 +1,5 @@
+import firstProduct from "./assets/product-10.jpg";
+
 function App() {
   function closeNave() {
     const navMenu = document.getElementById("nav-menu-checkbox");
@@ -56,17 +58,18 @@ function App() {
       <main>
         <section id="home" className="home">
           <div className="col-1">
-            <h1>Main product</h1>
+            <h1>Main product <br /> name</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
-              consequatur, quibusdam provident repellat, eveniet aperiam
-              veritatis deleniti tempore iure totam voluptatem maxime nihil
-              explicabo illo quod molestiae. Ut, nam ratione?
+              consequatur, quibusdam provident repellat. <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              consequatur.
             </p>
+            <button className="btn">DETAILS</button>
           </div>
           <div className="col-2">
-            {/* product image here */}
-            {/* video container here */}
+            <img src={firstProduct} width={200} alt="product image" />
+            <div className="home-video-container"></div>
           </div>
         </section>
         <section id="about"></section>

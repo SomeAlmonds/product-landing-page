@@ -10,6 +10,7 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 }
 .navbar .nav-col-1 {
   display: flex;
@@ -94,8 +95,33 @@ main {
   padding: 10px;
 }
 main .home {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  height: 100vh;
   scroll-behavior: smooth;
   scroll-margin-block-start: 70px;
+}
+main .home .col-1 {
+  width: 40%;
+}
+main .home .col-2 {
+  position: relative;
+}
+main .home .col-2 img {
+  position: absolute;
+  border-radius: 10px;
+  top: 30%;
+  left: -20%;
+}
+main .home .col-2 .home-video-container {
+  border-radius: 10px;
+  height: 400px;
+  width: 400px;
+  background: papayawhip;
+}
+main .home h1 {
+  color: rgb(67, 138, 138);
 }
 
 * {
@@ -116,6 +142,7 @@ body {
   border: 1px solid rgb(230, 186, 137);
   border-radius: 5px;
   color: papayawhip;
+  font-size: 16px;
   height: 40px;
   margin: 2px;
   min-width: 40px;
@@ -139,6 +166,15 @@ a:hover {
 }
 a:active {
   font-size: 1.5rem;
+}
+
+h1 {
+  line-height: 50px;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=index.css.map */

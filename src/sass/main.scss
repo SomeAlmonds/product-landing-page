@@ -1,9 +1,40 @@
+@use '_variables.scss' as *;
+
 main{
     margin-top: 70px;
     padding: 10px;
 
     .home{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        height: 100vh;
         scroll-behavior: smooth;
         scroll-margin-block-start: 70px;
+
+        .col-1{
+            width: 40%;
+        }
+        
+        .col-2{
+            position: relative;
+            img{
+                position: absolute;
+                border-radius: 10px;
+                top: 30%;
+                left: -20%;
+            }
+
+            .home-video-container{
+                border-radius: 10px;
+                height: 400px;
+                width: 400px;
+                background: $second-theme-color;
+            }
+        }
+
+        h1{
+            color: $main-text-color;
+        }
     }
 }
