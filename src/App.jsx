@@ -68,7 +68,9 @@ function App() {
             <button className="btn">DETAILS</button>
           </div>
           <div className="col-2">
+            <div className="img-container">
             <img src={firstProduct} width={200} alt="product image" />
+            </div>
             <div className="home-video-container"></div>
           </div>
         </section>
