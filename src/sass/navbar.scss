@@ -14,7 +14,7 @@
   width: 100%;
   z-index: 100;
 
-  .nav-col-1 {
+  .nav-row-1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -54,17 +54,19 @@
         top: -10px;
       }
 
-      &:hover {
-        .nav-menu-icon,
-        .nav-menu-icon::after,
-        .nav-menu-icon::before {
-          background-color: $main-theme-color;
+      @media (hover: hover) {
+        &:hover {
+          .nav-menu-icon,
+          .nav-menu-icon::after,
+          .nav-menu-icon::before {
+            background-color: $main-theme-color;
+          }
         }
       }
     }
   }
 
-  .nav-col-1:has(+ .nav-col-2 > .nav-menu-checkbox:checked) {
+  .nav-row-1:has(+ .nav-row-2 > .nav-menu-checkbox:checked) {
     .nav-menu-toggle {
       .nav-menu-icon {
         transform: rotate(135deg);
@@ -79,7 +81,7 @@
     }
   }
 
-  .nav-col-2 {
+  .nav-row-2 {
     .nav-menu {
       align-items: center;
       align-self: center;
