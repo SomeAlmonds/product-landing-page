@@ -65,12 +65,12 @@ export default function Navbar() {
             About
           </a>
           <a
-            href="#popular"
+            href="#products"
             className="menu-item"
             tabIndex={-1}
             onClick={() => toggleNav()}
           >
-            Popular Products
+            Products
           </a>
           <a
             href="#ratings"
