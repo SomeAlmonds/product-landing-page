@@ -1,5 +1,5 @@
 .navbar {
-  background-color: rgba(255, 239, 213, 0.7);
+  background-color: rgba(255, 242, 221, 0.7);
   backdrop-filter: blur(4px);
   display: flex;
   flex-flow: column nowrap;
@@ -19,6 +19,7 @@
   width: 100%;
 }
 .navbar .nav-row-1 .nav-logo {
+  color: rgb(59, 121, 121);
   flex: 1;
   font-size: 2rem;
   font-weight: 500;
@@ -32,7 +33,7 @@
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon,
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon::after,
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon::before {
-  background: papayawhip;
+  background: rgb(255, 242, 221);
   border-radius: 3px;
   display: block;
   height: 5px;
@@ -53,7 +54,7 @@
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon,
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon::after,
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon::before {
-    background-color: rgb(219, 175, 125);
+    background-color: rgb(204, 160, 109);
   }
 }
 .navbar .nav-row-1:has(+ .nav-row-2 > .nav-menu-checkbox:checked) .nav-menu-toggle .nav-menu-icon {
@@ -93,7 +94,7 @@
 }
 
 main h1 {
-  color: rgb(67, 138, 138);
+  color: rgb(59, 121, 121);
 }
 main section {
   scroll-snap-align: start none;
@@ -122,7 +123,7 @@ main .home .col-2 {
   min-width: 50%;
 }
 main .home .col-2 .home-big-img {
-  background: papayawhip;
+  background: rgb(255, 242, 221);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -132,7 +133,7 @@ main .home .col-2 .home-big-img {
   max-width: 85%;
 }
 main .home .col-2 .home-small-img {
-  background: papayawhip;
+  background: rgb(255, 242, 221);
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,22 +202,67 @@ main .products .products-scroll-container .product-scroll-secondary .scroll-prod
   width: 200px;
 }
 main .products .products-scroll-container .product-scroll-secondary {
-  animation-delay: 17.5s;
+  animation: placeholder-scroll-animation 17.5s linear;
 }
 main .products .products-scroll-container .product-scroll-primary:hover {
   animation-play-state: paused;
 }
 main .products .products-scroll-container .product-scroll-primary:hover ~ .product-scroll-secondary {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
 }
 main .products .products-scroll-container:has(> .product-scroll-secondary:hover) .product-scroll-primary,
 main .products .products-scroll-container:has(> .product-scroll-secondary:hover) .product-scroll-secondary {
-  animation-play-state: paused;
+  animation-play-state: paused !important;
+}
+main .locations {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 16px;
+  height: fit-content;
+  justify-content: space-around;
+  min-height: 400px;
+  padding: 20px;
+  scroll-margin-block-start: 70px;
+}
+main .locations .col-1 {
+  flex: 1 1;
+  min-width: 310px;
+}
+main .locations .locations-list {
+  align-self: flex-start;
+  display: grid;
+  flex: 1 1;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  list-style-type: none;
+  width: 40%;
+}
+main .locations .locations-list li {
+  background-color: rgba(255, 242, 221, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  min-height: 80px;
+  max-height: 170px;
+  padding: 10px;
+}
+main .locations .locations-list li button {
+  flex: 1;
+  min-width: 40%;
 }
 
 @keyframes scroll-animation {
   0% {
     left: 1320px;
+  }
+  100% {
+    left: -1320px;
+  }
+}
+@keyframes placeholder-scroll-animation {
+  0% {
+    left: 0;
   }
   100% {
     left: -1320px;
@@ -244,11 +290,11 @@ body {
 }
 
 .btn {
-  background-color: rgb(219, 175, 125);
-  border: 1px solid rgb(219, 175, 125);
+  background-color: rgb(204, 160, 109);
+  border: 1px solid rgb(204, 160, 109);
   border-radius: 5px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-  color: papayawhip;
+  color: rgb(255, 242, 221);
   font-size: 16px;
   height: 40px;
   margin: 2px;
@@ -264,21 +310,18 @@ body {
 }
 @media (hover: hover) {
   .btn:hover {
-    background-color: papayawhip;
-    color: rgb(219, 175, 125);
+    background-color: rgb(255, 242, 221);
+    color: rgb(204, 160, 109);
   }
 }
 
 a {
   text-decoration: none;
-  color: rgb(67, 138, 138);
+  color: rgb(59, 121, 121);
   transition: 100ms;
 }
 a:hover {
-  font-size: 1.6rem;
-}
-a:active {
-  font-size: 1.5rem;
+  color: rgb(125, 198, 201);
 }
 
 h1 {
@@ -288,6 +331,58 @@ h1 {
 p {
   font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 10px;
+}
+
+footer {
+  background-color: rgb(128, 100, 77);
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  min-height: calc(100vh - 70px);
+  padding: 10px 30px;
+}
+footer a,
+footer p {
+  color: rgba(0, 0, 0, 0.7);
+}
+footer h1,
+footer h3 {
+  color: black;
+}
+footer .container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+footer .container:first-child {
+  flex: 1;
+}
+footer .container:first-child p {
+  width: 60%;
+}
+footer .container div {
+  display: flex;
+  flex-flow: column nowrap;
+}
+footer .container div a {
+  text-wrap: nowrap;
+}
+
+footer > p {
+  border-top: 1px solid rgb(255, 242, 221);
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+}
+
+.top-btn {
+  bottom: 10%;
+  height: 50px;
+  position: fixed;
+  right: 50px;
+  width: 50px;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=index.css.map */

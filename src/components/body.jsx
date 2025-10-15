@@ -1,7 +1,24 @@
+import { useEffect } from "react";
 import imgs from "../assets/imgImport";
 import productList from "../assets/products";
 
 export default function Body() {
+  useEffect(() => {
+    // This useEffect replaces the placeholder animation in 'product-scroll-secondary' with the main animation.
+    // see 'main.scss' > '@keyframs placeholder-scroll-animation' for more details.
+
+    const productScroll = document.getElementsByClassName(
+      "product-scroll-secondary"
+    )[0];
+    productScroll.addEventListener("animationend", () => {
+      productScroll.setAttribute(
+        "style",
+        "animation: scroll-animation 35s linear infinite;"
+      );
+      productScroll.removeEventListener("animationend", () => {});
+    });
+  }, []);
+
   return (
     <>
       {/* //////////////////// HOME ////////////////// */}
@@ -62,11 +79,41 @@ export default function Body() {
 
       <section id="products" className="products">
         <div className="products-scroll-container">
-          <ProductScroll product_scroll={'primary'}/>
-          <ProductScroll product_scroll={'secondary'}/>
+          <ProductScroll product_scroll={"primary"} />
+          <ProductScroll product_scroll={"secondary"} />
         </div>
       </section>
-      <section id="ratings"></section>
+
+      {/* //////////////////// locatoins ////////////////// */}
+
+      <section id="locations" className="locations">
+        <div className="col-1">
+          <h1>Where To Find Us:</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut
+            ducimus, minus error quia odit quod incidunt beatae, placeat eius
+            labore sed in iure quasi. Amet architecto iure a vitae earum.
+          </p>
+        </div>
+        <ul className="locations-list">
+          <li>
+            <h3>Location 1</h3>
+            <button className="btn">View</button>
+          </li>
+          <li>
+            <h3>Location 2</h3>
+            <button className="btn">View</button>
+          </li>
+          <li>
+            <h3>Location 3</h3>
+            <button className="btn">View</button>
+          </li>
+          <li>
+            <h3>Location 4</h3>
+            <button className="btn">View</button>
+          </li>
+        </ul>
+      </section>
     </>
   );
 }

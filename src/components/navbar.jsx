@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <div className="navbar">
       <div className="nav-row-1">
-        <div className="nav-logo">AL.CO</div>
+        <div className="nav-logo">BRAND</div>
 
         <button className="btn">CONTACT US</button>
         <div className="nav-cart"></div>
@@ -73,12 +73,12 @@ export default function Navbar() {
             Products
           </a>
           <a
-            href="#ratings"
+            href="#locations"
             className="menu-item"
             tabIndex={-1}
             onClick={() => toggleNav()}
           >
-            Ratings
+            Our Locations
           </a>
         </div>
       </div>

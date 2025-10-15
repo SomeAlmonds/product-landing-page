@@ -1,7 +1,6 @@
 @use "_variables.scss" as *;
 
 main {
-  // padding: 10px;
 
   h1 {
     color: $main-text-color;
@@ -10,6 +9,8 @@ main {
   section {
     scroll-snap-align: start none;
   }
+
+  ///////////////////// MAIN SECTION /////////////////////
 
   .home {
     display: flex;
@@ -61,6 +62,8 @@ main {
     }
   }
 
+  ///////////////////// ABOUT SECTION /////////////////////
+
   .about {
     background-color: $second-bg-color;
     display: flex;
@@ -87,6 +90,8 @@ main {
       min-width: 50%;
     }
   }
+
+  ///////////////////// PRODUCTS SECTION /////////////////////
 
   .products {
     scroll-margin-block-start: 70px;
@@ -121,29 +126,90 @@ main {
           width: 200px;
         }
       }
+
       .product-scroll-secondary {
-        animation-delay: 17.5s;
+        animation: placeholder-scroll-animation 17.5s linear;
       }
 
       .product-scroll-primary:hover {
         animation-play-state: paused;
         & ~ .product-scroll-secondary {
-          animation-play-state: paused;
+          // !important is because replacing the animation in js removes this effect for some reasone
+          animation-play-state: paused !important;
         }
       }
 
       &:has(> .product-scroll-secondary:hover) {
         .product-scroll-primary,
         .product-scroll-secondary {
-          animation-play-state: paused;
+          animation-play-state: paused !important;
+        }
+      }
+    }
+  }
+
+  ///////////////////// LOCATIONS SECTION /////////////////////
+
+  .locations {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    height: fit-content;
+    justify-content: space-around;
+    min-height: 400px;
+    padding: 20px;
+    scroll-margin-block-start: 70px;
+
+    .col-1{
+      flex: 1 1;
+      min-width: 310px;
+    }
+
+    .locations-list{
+      align-self: flex-start;
+      display: grid;
+      flex: 1 1;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      list-style-type: none;
+      width: 40%;
+
+      li{
+        background-color: rgba($second-theme-color, 0.7);
+        border-radius: 10px;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+        min-height: 80px;
+        max-height: 170px;
+        padding: 10px;
+      
+        button{
+          flex: 1;
+          min-width: 40%;
         }
       }
     }
   }
 }
+
+///////////////////// ANIMATIONS /////////////////////
+
 @keyframes scroll-animation {
   0% {
     left: 1320px;
+  }
+  100% {
+    left: -1320px;
+  }
+}
+
+@keyframes placeholder-scroll-animation {
+  // The goal of this animation is to run as a placeholder for the first render
+  // of product-scroll-secondary, without it the element either stays motionless while the
+  // animation delay ends or the animation container is empty until the element scroll into view
+  0% {
+    left: 0;
   }
   100% {
     left: -1320px;
