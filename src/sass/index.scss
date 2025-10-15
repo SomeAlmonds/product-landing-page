@@ -47,11 +47,11 @@ body {
     scale: 95%;
   }
 
-  @media (hover: hover) {
-    &:hover {
-      background-color: $second-theme-color;
-      color: $main-theme-color;
-    }
+}
+@media (hover: hover) {
+  .btn:hover {
+    background-color: $second-theme-color;
+    color: $main-theme-color;
   }
 }
 
