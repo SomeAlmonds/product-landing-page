@@ -3,7 +3,7 @@
 main {
 
   h1 {
-    color: $main-text-color;
+    color: $last-theme-color;
   }
 
   section {
@@ -37,7 +37,7 @@ main {
       min-width: 50%;
 
       .home-big-img {
-        background: $second-theme-color;
+        background: $third-theme-color;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -48,7 +48,7 @@ main {
       }
 
       .home-small-img {
-        background: $second-theme-color;
+        background: $third-theme-color;
         background-position: 100% 50%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -65,7 +65,7 @@ main {
   ///////////////////// ABOUT SECTION /////////////////////
 
   .about {
-    background-color: $second-bg-color;
+    background-color: $third-theme-color;
     display: flex;
     flex-flow: row wrap;
     height: fit-content;
@@ -175,7 +175,7 @@ main {
       width: 40%;
 
       li{
-        background-color: rgba($second-theme-color, 0.7);
+        background-color: rgba($third-theme-color, 0.7);
         border-radius: 10px;
         display: flex;
         flex-flow: row wrap;

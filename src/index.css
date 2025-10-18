@@ -1,6 +1,7 @@
 .navbar {
-  background-color: rgba(255, 242, 221, 0.7);
+  background-color: rgba(236, 217, 198, 0.7);
   backdrop-filter: blur(4px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: column nowrap;
   gap: 0;
@@ -19,7 +20,7 @@
   width: 100%;
 }
 .navbar .nav-row-1 .nav-logo {
-  color: rgb(59, 121, 121);
+  color: rgb(0, 128, 128);
   flex: 1;
   font-size: 2rem;
   font-weight: 500;
@@ -33,7 +34,7 @@
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon,
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon::after,
 .navbar .nav-row-1 .nav-menu-toggle .nav-menu-icon::before {
-  background: rgb(255, 242, 221);
+  background: rgb(236, 217, 198);
   border-radius: 3px;
   display: block;
   height: 5px;
@@ -54,7 +55,7 @@
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon,
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon::after,
   .navbar .nav-row-1 .nav-menu-toggle:hover .nav-menu-icon::before {
-    background-color: rgb(204, 160, 109);
+    background-color: rgb(204, 155, 102);
   }
 }
 .navbar .nav-row-1:has(+ .nav-row-2 > .nav-menu-checkbox:checked) .nav-menu-toggle .nav-menu-icon {
@@ -94,7 +95,7 @@
 }
 
 main h1 {
-  color: rgb(59, 121, 121);
+  color: rgb(0, 128, 128);
 }
 main section {
   scroll-snap-align: start none;
@@ -123,7 +124,7 @@ main .home .col-2 {
   min-width: 50%;
 }
 main .home .col-2 .home-big-img {
-  background: rgb(255, 242, 221);
+  background: rgb(236, 217, 198);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,7 +134,7 @@ main .home .col-2 .home-big-img {
   max-width: 85%;
 }
 main .home .col-2 .home-small-img {
-  background: rgb(255, 242, 221);
+  background: rgb(236, 217, 198);
   background-position: 100% 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -145,7 +146,7 @@ main .home .col-2 .home-small-img {
   top: 30%;
 }
 main .about {
-  background-color: rgb(235, 224, 190);
+  background-color: rgb(236, 217, 198);
   display: flex;
   flex-flow: row wrap;
   height: fit-content;
@@ -238,7 +239,7 @@ main .locations .locations-list {
   width: 40%;
 }
 main .locations .locations-list li {
-  background-color: rgba(255, 242, 221, 0.7);
+  background-color: rgba(236, 217, 198, 0.7);
   border-radius: 10px;
   display: flex;
   flex-flow: row wrap;
@@ -283,18 +284,18 @@ html {
 }
 
 body {
-  background-color: rgb(221, 207, 160);
+  background-color: rgb(217, 192, 166);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
 }
 
 .btn {
-  background-color: rgb(204, 160, 109);
-  border: 1px solid rgb(204, 160, 109);
+  background-color: rgb(204, 155, 102);
+  border: 1px solid rgb(204, 155, 102);
   border-radius: 5px;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
-  color: rgb(255, 242, 221);
+  color: rgb(236, 217, 198);
   font-size: 16px;
   height: 40px;
   margin: 2px;
@@ -311,13 +312,13 @@ body {
 
 @media (hover: hover) {
   .btn:hover {
-    background-color: rgb(255, 242, 221);
-    color: rgb(204, 160, 109);
+    background-color: rgb(236, 217, 198);
+    color: rgb(204, 155, 102);
   }
 }
 a {
   text-decoration: none;
-  color: rgb(59, 121, 121);
+  color: rgb(0, 128, 128);
   transition: 100ms;
 }
 a:hover {
@@ -370,7 +371,7 @@ footer .container div a {
 }
 
 footer > p {
-  border-top: 1px solid rgb(255, 242, 221);
+  border-top: 1px solid rgb(217, 192, 166);
   margin-top: 20px;
   padding: 5px;
   text-align: center;

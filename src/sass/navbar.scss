@@ -1,8 +1,9 @@
 @use "_variables.scss" as *;
 
 .navbar {
-  background-color: rgba($second-theme-color, 0.7);
+  background-color: rgba($third-theme-color, 0.7);
   backdrop-filter: blur(4px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-flow: column nowrap;
   gap: 0;
@@ -21,7 +22,7 @@
     width: 100%;
 
     .nav-logo {
-      color: $main-text-color;
+      color: $last-theme-color;
       flex: 1;
       font-size: 2rem;
       font-weight: 500;
@@ -37,7 +38,7 @@
       .nav-menu-icon,
       .nav-menu-icon::after,
       .nav-menu-icon::before {
-        background: $second-theme-color;
+        background: $third-theme-color;
         border-radius: 3px;
         display: block;
         height: 5px;
