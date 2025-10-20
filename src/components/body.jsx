@@ -10,14 +10,17 @@ export default function Body() {
     const productScroll = document.getElementsByClassName(
       "product-scroll-secondary"
     )[0];
-    productScroll.addEventListener("animationend", () => {
-      productScroll.setAttribute(
-        "style",
-        "animation: scroll-animation 35s linear infinite;"
-      );
-      productScroll.removeEventListener("animationend", () => {});
-    });
-  }, []);
+    productScroll.addEventListener(
+      "animationend",
+      () => {
+        productScroll.setAttribute(
+          "style",
+          "animation: scroll-animation 35s linear infinite;"
+        );
+      },
+      { once: true }
+    );
+  });
 
   return (
     <>
